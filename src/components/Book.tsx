@@ -3,10 +3,17 @@ import { IBook } from '../interfaces';
 interface IProps {
 	book: IBook;
 	showImages: boolean;
+	books: IBook[];
 }
 
 export const Book = (props: IProps) => {
-	const { book, showImages } = props;
+	const { book, books, showImages } = props;
+
+	const handleChangeLiked = (book: IBook) => {
+		book.isLiked = !book.isLiked;
+		setBooks([...books]);
+	};
+
 	return (
 		<div className="book">
 			{showImages && (
@@ -21,7 +28,14 @@ export const Book = (props: IProps) => {
 					</a>
 				</div>
 				<div className="author">{book.author}</div>
-				<div className="isLiked">{book.isLiked ? 'LIKED' : 'not liked'}</div>
+				<div className="isLiked">
+					{book.isLiked ? 'LIKED' : 'not liked'}
+				</div>
+				<div>
+					<button onClick={() => handleChangeLiked(book)}>
+						toggle like
+					</button>
+				</div>
 			</div>
 		</div>
 	);

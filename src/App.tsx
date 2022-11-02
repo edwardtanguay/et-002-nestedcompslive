@@ -4,17 +4,18 @@ import { Books } from './components/Books';
 import rawBooks from './data/books.json';
 import { IBook } from './interfaces';
 
-const books: IBook[] = [];
+const _books: IBook[] = [];
 rawBooks.forEach((rawBook) => {
 	const book: IBook = {
 		...rawBook,
 		isLiked: false
 	};
-	books.push(book);
+	_books.push(book);
 });
 
 function App() {
 	const [showImages, setShowImages] = useState(true);
+	const [books, setBooks] = useState(_books)
 
 	return (
 		<div className="App">

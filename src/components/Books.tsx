@@ -12,7 +12,7 @@ export const Books = (props:IProps) => {
 		<div className="books">
 			{books.map((book:IBook) => {
 				return (
-					<Book book={book} showImages={showImages} key={book.id}/>
+					<Book book={book} books={books} showImages={showImages} key={book.id}/>
 				);
 			})}
 		</div>
