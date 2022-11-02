@@ -21,6 +21,7 @@ export const Book = (props: IProps) => {
 					</a>
 				</div>
 				<div className="author">{book.author}</div>
+				<div className="isLiked">{book.isLiked ? 'LIKED' : 'not liked'}</div>
 			</div>
 		</div>
 	);

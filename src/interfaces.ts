@@ -4,4 +4,5 @@ export interface IBook {
 	author: string;
 	imageUrl: string;
 	bookUrl: string;
+	isLiked: boolean;
 }
