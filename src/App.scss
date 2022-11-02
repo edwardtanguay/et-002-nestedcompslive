@@ -24,6 +24,19 @@ body {
      
         .info {
             margin: 0 0 0 10px;
+
+            .thumbs {
+                font-size: 2rem;
+            }
+
+            .thumbsIsLiked {
+                color: yellow;
+            }
+
+            .thumbsIsNotLiked {
+                color: #777;
+            }
+
      
             .title {
                 font-size: 1.4rem;

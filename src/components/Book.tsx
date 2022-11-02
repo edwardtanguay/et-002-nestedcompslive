@@ -1,4 +1,5 @@
 import { IBook } from '../interfaces';
+import { AiFillLike } from 'react-icons/ai';
 
 interface IProps {
 	book: IBook;
@@ -30,6 +31,7 @@ export const Book = (props: IProps) => {
 				</div>
 				<div className="author">{book.author}</div>
 				<div className="isLiked">
+					<AiFillLike className={book.isLiked ? 'thumbs thumbsIsLiked' : 'thumbs thumbsIsNotLiked'} />
 					{book.isLiked ? 'LIKED' : 'not liked'}
 				</div>
 				<div>
