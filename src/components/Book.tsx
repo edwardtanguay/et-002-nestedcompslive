@@ -1,5 +1,7 @@
+import { IBook } from '../interfaces';
+
 interface IProps {
-	book: any;
+	book: IBook;
 }
 
 export const Book = (props: IProps) => {
