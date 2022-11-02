@@ -4,10 +4,11 @@ interface IProps {
 	book: IBook;
 	showImages: boolean;
 	books: IBook[];
+	setBooks: any;
 }
 
 export const Book = (props: IProps) => {
-	const { book, books, showImages } = props;
+	const { book, books, setBooks, showImages } = props;
 
 	const handleChangeLiked = (book: IBook) => {
 		book.isLiked = !book.isLiked;
